@@ -2,6 +2,8 @@
 
 Code for a stacked hybrid model that forecasts hourly electricity consumption in a food processing plant, together with the reference models, ablation, statistical tests and a forecast-triggered peak-load reduction rule.
 
+**Status.** This code accompanies a manuscript that is under peer review. It is shared so that the analysis can be examined and run. Please do not reuse or redistribute it without the authors' permission (see `LICENSE`). Once the article is published, please cite it.
+
 The plant data are confidential and are not included. The repository contains a script that creates **synthetic data with the same structure**, so every part of the code can be run and checked. Results obtained with the synthetic data do not reproduce results obtained with the plant data.
 
 ## Quick start
@@ -81,4 +83,4 @@ Daily production file (`--production`): `date` and one or more `*_output_kg` col
 
 ## Licence
 
-MIT.
+All rights reserved; see `LICENSE`. The code may be viewed, downloaded and run to review or reproduce the analysis. Any other use, modification or redistribution requires the authors' written permission.
