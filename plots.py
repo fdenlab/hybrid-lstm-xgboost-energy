@@ -1,5 +1,5 @@
 """
-Figures (serif bold fonts, blue measured /
+Figures (default Matplotlib font; blue measured /
 orange dashed forecast, pink On-Peak shading, red dashed threshold).
 
 Use after run_all.main(...) which returns a dict with D, keep, feats and agg:
@@ -22,9 +22,6 @@ def _style():
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     plt.rcParams.update({
-        "font.family": "serif",
-        "font.serif": ["Times New Roman", "Liberation Serif", "DejaVu Serif"],
-        "font.weight": "bold", "axes.labelweight": "bold", "axes.titleweight": "bold",
         "font.size": 12, "axes.linewidth": 1.2, "legend.fontsize": 10,
         "xtick.major.width": 1.0, "ytick.major.width": 1.0, "savefig.dpi": 300,
     })
