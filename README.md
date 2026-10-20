@@ -55,7 +55,7 @@ Daily production file (`--production`): `date` and one or more `*_output_kg` col
 * LSTM: 64 units, ReLU, 24-hour input window (Min–Max scaled with training-period limits), 20 epochs, batch 32, 10 % validation split.
 * XGBoost meta-learner: 100 trees, depth 6, learning rate 0.1; inputs = weather, monthly mean temperature (training period), temperature anomaly, production, calendar and shift indicators, weekday On-Peak flag, public-holiday flag, season, EN at t−1 and t−24, and the LSTM prediction.
 * Separate models for the day shift (06:00–18:59) and night shift (19:00–05:59).
-* Reference models: persistence (t−1), seasonal naive (t−24), standalone LSTM, standalone XGBoost, reciprocal-error weighting of LSTM and XGBoost (Chen et al., 2019; weights from the last 10 % of the training period).
+* Reference models: persistence (t−1), seasonal naive (t−24), standalone LSTM, standalone XGBoost, reciprocal-error weighting of LSTM and XGBoost.
 * Five seeds (42, 0, 1, 2, 3); Diebold–Mariano test (HLN correction, Newey–West variance, 24 lags) and Wilcoxon signed-rank test.
 * Peak-load rule: in weekday On-Peak hours (09:00–21:59, not public holidays) in which the forecast exceeds the threshold (default 2,200 kWh), the **measured** load is reduced by α (5, 10, 15 %).
 
